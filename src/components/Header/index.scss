@@ -1,0 +1,33 @@
+@use "../../scss/variables" as *;
+
+.header{
+    background-color: $blue;
+    width: 100%;
+    height: 100px;
+
+    &__nav-wrapper{
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        padding-left: 60px;
+    }
+
+    &__nav{
+        padding: 12px 0px;
+    }
+
+    &__nav-link{
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 38px;
+        color: $white;
+        padding: 14px 30px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    &__nav-link--selected{
+        color: $blue;
+        background-color: $white;
+    }
+}

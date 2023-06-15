@@ -1,0 +1,90 @@
+@use "../../scss/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap");
+
+.taskTable {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 685px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  th {
+    color: $white;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 35px;
+    font-family: "Raleway", sans-serif;
+    height: 100px;
+  }
+
+  td {
+    color: $white;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 29px;
+    font-family: "Raleway", sans-serif;
+    height: 60px;
+  }
+
+  &__checkbox {
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border: 2px solid $white;
+    border-radius: 3px;
+  }
+
+  &__checkbox:checked{
+    appearance: none;
+    background: url('../../assets/checked.svg');
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: none;
+  }
+
+  &__align-start {
+    text-align: start;
+  }
+
+  &__align-center {
+    text-align: center;
+  }
+
+  &__align-end {
+    text-align: end;
+  }
+
+  &__w4 {
+    width: 40%;
+  }
+
+  &__w2 {
+    width: 20%;
+  }
+
+  &__icon {
+    color: $white;
+  }
+
+  &__icon-ml15 {
+    margin-left: 15px;
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+
+  &__plus {
+    font-size: 35px !important;
+    padding-left: 45px;
+  }
+
+  &__icones{
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
