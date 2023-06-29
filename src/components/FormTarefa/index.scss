@@ -1,0 +1,54 @@
+@use "../../scss/variables" as *;
+
+.formTarefa {
+  display: grid;
+  justify-content: center;
+
+  &__div-input {
+    display: grid;
+    width: 685px;
+  }
+
+  input,
+  textarea {
+    border: 2px solid #0c70f2;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 35px;
+  }
+
+  label {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__div-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    width: 270px;
+    height: 77px;
+    background: $white;
+    border: 1px solid $black;
+    border-radius: 10px;
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+
+  &__button-blue {
+    background: $blue;
+    border: 1px solid $blue;
+    color: $white;
+  }
+}
