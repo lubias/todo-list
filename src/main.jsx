@@ -6,11 +6,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home/Home';
+import AdicionarTarefa from './pages/AdicionarTarefa/AdicionarTarefa';
+import EditarTarefa from './pages/EditarTarefa/EditarTarefa';
+import { TAREFAS_MOCK } from './mock/tarefas.mock';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Home data={ TAREFAS_MOCK } />,
+  },
+  {
+    path: "/adicionar",
+    element: <AdicionarTarefa />,
+  },
+  {
+    path: "/editar/:id",
+    element: <EditarTarefa data={ TAREFAS_MOCK } />,
   },
 ]);
 

@@ -5,21 +5,7 @@ import "./index.scss";
 import Modal from "../Modal/Modal";
 import ModalAdicionar from "../ModalAdicionar/ModalAdicionar";
 
-function TaskTable() {
-  const [data, setData] = useState([
-    {
-      id: 1,
-      nome: "Limpar a casa",
-      status: false,
-    },
-    {
-      id: 2,
-      nome: "Responder e-mails",
-      status: false,
-    },
-  ]);
-
-  const [newTask, setNewTask] = useState(null);
+function TaskTable({data}) {
   const [checkedOne, setCheckedOne] = React.useState(false);
   const [checkedTwo, setCheckedTwo] = React.useState(false);
 
@@ -55,7 +41,7 @@ function TaskTable() {
                 }} /></th>
                 <th className="taskTable__align-center taskTable__w2">
                   <div className="taskTable__icones">
-                    <Modal descricao={task.nome} icon={faPencil} acao={"editar"} />
+                    <Modal descricao={task.nome} icon={faPencil} acao={"editar"} id_tarefa={task.id} />
                     <Modal descricao={task.nome} icon={faTrash} acao={"excluir"} />
                   </div>
                 </th>
