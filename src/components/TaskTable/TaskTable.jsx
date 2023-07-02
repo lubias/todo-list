@@ -54,14 +54,14 @@ function TaskTable({ data }) {
                       descricao={task.nome}
                       icon={faPencil}
                       acao={"editar"}
-                      id_tarefa={task.id}
+                      link={`editar/${task.id}`}
                     />
-                    <Link to={`/deletar/${task.id}`}>
-                      <FontAwesomeIcon
-                        icon={faTrash}
-                        className="taskTable__icon"
-                      />
-                    </Link>
+                    <Modal
+                      descricao={task.nome}
+                      icon={faTrash}
+                      acao={"deletar"}
+                      link={`deletar/${task.id}`}
+                    />
                   </div>
                 </th>
               </tr>

@@ -4,7 +4,7 @@ import "./index.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Modal({ descricao, icon, acao, id_tarefa }) {
+export default function Modal({ descricao, icon, acao, link }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ export default function Modal({ descricao, icon, acao, id_tarefa }) {
             <p className="modal__descricao">{descricao}</p>
             <div className="modal__div-buttons">
               <button className="modal__button modal__button-blue">Não</button>
-              <Link to={`editar/${id_tarefa}`}>
+              <Link to={link}>
                 <button className="modal__button">Sim</button>
               </Link>
             </div>

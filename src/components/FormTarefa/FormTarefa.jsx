@@ -16,7 +16,6 @@ function FormTarefa(props) {
   };
 
   const gravarTarefa = () => {
-    console.log(props.id);
     if(props.id != 0){
       const tarefaSelecionada = TAREFAS_MOCK.find(
         (tarefa) => tarefa.id == props.id
@@ -27,7 +26,7 @@ function FormTarefa(props) {
         tarefaSelecionada.descricao = descricao;
       }
     }else{
-      let id = TAREFAS_MOCK.length + 1;
+      let id = TAREFAS_MOCK[TAREFAS_MOCK.length - 1].id + 1;
 
       let obj = {
         "id":id,
