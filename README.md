@@ -27,14 +27,14 @@ Neste site o utilizador poderá adicionar e gerenciar suas tarefas diárias, pod
 ### Home
 ![home](https://github.com/lubias/todo-list/assets/107640123/96f138f7-5eb0-45fa-948f-def2e9c28532)
 
-## Editar
+### Editar
 ![editar_1](https://github.com/lubias/todo-list/assets/107640123/fba2da79-8acb-4ecb-b23f-3fcaf5357aa7)
 ![editar_2](https://github.com/lubias/todo-list/assets/107640123/f4982fb8-2858-4431-bf75-3ea41eb17bca)
 
-## Adicionar
+### Adicionar
 ![adicionar](https://github.com/lubias/todo-list/assets/107640123/cd331b02-2f5e-4058-98c0-4578ac57d01e)
 
-## Excluir
+### Excluir
 ![excluir_1](https://github.com/lubias/todo-list/assets/107640123/2d1087fc-cd31-43d4-ab9b-1920e50b9def)
 ![excluir_2](https://github.com/lubias/todo-list/assets/107640123/6b4de6d3-b6db-42e2-9dd4-9a0736bf9437)
 
