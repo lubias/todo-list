@@ -1,4 +1,4 @@
-export let TAREFAS_MOCK = [
+export const TAREFAS_MOCK = [
   {
     id: 1,
     nome: "Limpar a casa",
