@@ -16,9 +16,27 @@ function FormTarefa(props) {
   };
 
   const gravarTarefa = () => {
-    const tarefaSelecionada = TAREFAS_MOCK.find(tarefa => tarefa.id == props.id);
-    tarefaSelecionada.nome = tarefa;
-    tarefaSelecionada.descricao = descricao;
+    console.log(props.id);
+    if(props.id != 0){
+      const tarefaSelecionada = TAREFAS_MOCK.find(
+        (tarefa) => tarefa.id == props.id
+      );
+  
+      if (typeof tarefaSelecionada !== "null") {
+        tarefaSelecionada.nome = tarefa;
+        tarefaSelecionada.descricao = descricao;
+      }
+    }else{
+      let id = TAREFAS_MOCK.length + 1;
+
+      let obj = {
+        "id":id,
+        "nome":tarefa,
+        "descricao":descricao,
+        "status":false
+      }
+      TAREFAS_MOCK.push(obj);
+    }
   };
 
   return (
@@ -49,7 +67,11 @@ function FormTarefa(props) {
             Cencelar
           </button>
         </Link>
-        <Link to={"/"}><button className="formTarefa__button" onClick={gravarTarefa}>Gravar</button></Link>
+        <Link to={"/"}>
+          <button className="formTarefa__button" onClick={gravarTarefa}>
+            Gravar
+          </button>
+        </Link>
       </div>
     </form>
   );

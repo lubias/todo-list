@@ -8,7 +8,7 @@ function AdicionarTarefa() {
         <div className='editar'>
             <h1 className='editar__titulo'>Adicionar tarefa</h1>
         </div>
-        <FormTarefa tarefa={''}/>
+        <FormTarefa id="0"/>
     </>
   )
 }

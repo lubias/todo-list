@@ -1,11 +1,12 @@
-import { faPencil, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPencil, faTrash, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "./index.scss";
 import Modal from "../Modal/Modal";
-import ModalAdicionar from "../ModalAdicionar/ModalAdicionar";
+import ModalDelete from "../ModalDelete/ModalDelete";
+import { Link } from "react-router-dom";
 
-function TaskTable({data}) {
+function TaskTable({ data }) {
   const [checkedOne, setCheckedOne] = React.useState(false);
   const [checkedTwo, setCheckedTwo] = React.useState(false);
 
@@ -31,18 +32,36 @@ function TaskTable({data}) {
           <tbody>
             {data.map((task) => (
               <tr key={`tarefa_${task.id}`}>
-                <th className="taskTable__align-start taskTable__w4">{task.nome}</th>
-                <th className="taskTable__align-center taskTable__w4"><input type="checkbox" className="taskTable__checkbox" onClick={ () => {
-                  if(task.id == 1){
-                    handleChangeOne()
-                  }else{
-                    handleChangeTwo()
-                  }
-                }} /></th>
+                <th className="taskTable__align-start taskTable__w4">
+                  {task.nome}
+                </th>
+                <th className="taskTable__align-center taskTable__w4">
+                  <input
+                    type="checkbox"
+                    className="taskTable__checkbox"
+                    onClick={() => {
+                      if (task.id == 1) {
+                        handleChangeOne();
+                      } else {
+                        handleChangeTwo();
+                      }
+                    }}
+                  />
+                </th>
                 <th className="taskTable__align-center taskTable__w2">
                   <div className="taskTable__icones">
-                    <Modal descricao={task.nome} icon={faPencil} acao={"editar"} id_tarefa={task.id} />
-                    <Modal descricao={task.nome} icon={faTrash} acao={"excluir"} />
+                    <Modal
+                      descricao={task.nome}
+                      icon={faPencil}
+                      acao={"editar"}
+                      id_tarefa={task.id}
+                    />
+                    <Link to={`/deletar/${task.id}`}>
+                      <FontAwesomeIcon
+                        icon={faTrash}
+                        className="taskTable__icon"
+                      />
+                    </Link>
                   </div>
                 </th>
               </tr>
@@ -53,7 +72,9 @@ function TaskTable({data}) {
               </td>
               <td className="taskTable__align-center"></td>
               <td className="taskTable__align-center taskTable__italic taskTable__plus">
-                <ModalAdicionar />
+                <Link to="/adicionar">
+                  <FontAwesomeIcon icon={faPlus} className="taskTable__icon" />
+                </Link>
               </td>
             </tr>
           </tbody>

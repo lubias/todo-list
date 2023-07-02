@@ -9,6 +9,7 @@ import Home from './pages/Home/Home';
 import AdicionarTarefa from './pages/AdicionarTarefa/AdicionarTarefa';
 import EditarTarefa from './pages/EditarTarefa/EditarTarefa';
 import { TAREFAS_MOCK } from './mock/tarefas.mock';
+import DeletarTarefa from './pages/DeletarTarefa/DeletarTarefa';
 
 const router = createBrowserRouter([
   {
@@ -23,10 +24,12 @@ const router = createBrowserRouter([
     path: "/editar/:id",
     element: <EditarTarefa data={ TAREFAS_MOCK } />,
   },
+  {
+    path: "/deletar/:id",
+    element: <DeletarTarefa data={ TAREFAS_MOCK } />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>,
 )
